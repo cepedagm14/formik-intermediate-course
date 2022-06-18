@@ -1,4 +1,5 @@
 import React from "react";
+import ChakraInput from "./ChakraInput";
 import Checkbox from "./Checkbox";
 import DatePicker from "./DatePicker";
 import Input from "./Input";
@@ -20,7 +21,10 @@ function FormikControl(props) {
       return <Radio {...rest} />;
     case "checkbox":
       return <Checkbox {...rest} />;
-    case "datepicker": return <DatePicker {...rest} />
+    case "datepicker":
+      return <DatePicker {...rest} />;
+    case "chakra":
+      return <ChakraInput {...rest} />;
     default:
       return null;
   }
